@@ -25,8 +25,31 @@ console.log(`La bici più leggera è ${lightestBike.name} con un peso di ${light
 
 // Snack 2
 const teams = [
-      { name: 'Juventus', points: 0, fouls: 0, makeThemSuffer: 0, },
-      { name: 'Inter', points: 0, fouls: 0, makeThemSuffer: 0, },
-      { name: 'Milan', points: 0, fouls: 2, makeThemSuffer: 0, },
-      { name: 'Napoli', points: 0, fouls: 0, makeThemSuffer: 0, },]
+      { name: 'Juventus', points: 0, makeThemSuffer: 0, },
+      { name: 'Inter', points: 0, makeThemSuffer: 0, },
+      { name: 'Milan', points: 0, makeThemSuffer: 0, },
+      { name: 'Napoli', points: 0, makeThemSuffer: 0, },
+]
+
+// Funzione per generare un numero intero casuale tra min e max inclusi
+function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Assegna numeri random a points e makeThemSuffer
+teams.forEach(team => {
+      team.points = getRandomInt(0, 100);
+      team.makeThemSuffer = getRandomInt(0, 50);
+});
+
+// Crea nuovo array con solo nome e falli subiti
+const teamsFouls = teams.map(team => ({
+      name: team.name,
+      makeThemSuffer: team.makeThemSuffer
+}));
+
+console.log(teams);
+console.log(teamsFouls);
+
+
 
