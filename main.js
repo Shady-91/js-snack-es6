@@ -25,4 +25,8 @@ console.log(`La bici più leggera è ${lightestBike.name} con un peso di ${light
 
 // Snack 2
 const teams = [
-      { name: 'Juventus', points: 5, fouls, }
+      { name: 'Juventus', points: 0, fouls: 0, makeThemSuffer: 0, },
+      { name: 'Inter', points: 0, fouls: 0, makeThemSuffer: 0, },
+      { name: 'Milan', points: 0, fouls: 2, makeThemSuffer: 0, },
+      { name: 'Napoli', points: 0, fouls: 0, makeThemSuffer: 0, },]
+
